@@ -1,3 +1,4 @@
+
 // option 1
 let arrOne = ["Apple", "Orange", "Pear", "Lemon"];
 arrOne.map(i => console.log(i));
