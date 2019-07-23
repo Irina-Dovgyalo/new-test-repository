@@ -67,3 +67,4 @@ console.log(Number('5') * Number('10')); //50
 console.log(Number('0011')); //11
 console.log(String(5) * String(10)); //50
 
+
