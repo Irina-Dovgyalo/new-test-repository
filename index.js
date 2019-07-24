@@ -1,3 +1,4 @@
+
 function sum(a, b){
     return a + b;
 }
@@ -36,3 +37,9 @@ function getEvenNumberFromArray(arr){
 let arr1 = [1, 3, 4, 2, 6, 8, 3, 7];
 
 console.log(getEvenNumberFromArray(arr1));
+
+
+
+
+
+
