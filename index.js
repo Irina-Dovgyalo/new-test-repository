@@ -1,31 +1,44 @@
 
-console.log('0' == 0); //true
-console.log('0' === 0); //false
-console.log('' === ''); //true
-console.log('A' > 'B'); //false
-console.log('a' > 'A'); //true
+function sum(a, b){
+    return a + b;
+}
 
-console.log(100 > 15); //true
-console.log('15' >= 15); //true
-console.log('15' > 10); //true
-console.log('01' == 1 ); //true
+console.log(sum(5, 3));
 
-console.log('' == false); //true
-console.log(0 == false); //true
-console.log(0 === false); //false
-console.log(1 == true); //true
-console.log(undefined == false); //false
-console.log(NaN == false); //false
-console.log(null == false); //false
-console.log(null >= 0); //true
-console.log(null > 0); //false
-console.log(null == 0); //false
-console.log(null == undefined); //true
-console.log(null === null); //true
-console.log(undefined === undefined); //true
-console.log(undefined > 0); //false
-console.log(undefined < 0); //false
-console.log(undefined == 0); //false
+function checkName(name){
+    let userName = 'Вася';
+    if(name == userName){
+        console.log('Привет, ' + name);
+    }
+}
+
+console.log(checkName('Вася'));
+
+function checkTypeOfArgument(a){
+    return typeof(a);
+}
+
+console.log(checkTypeOfArgument('str'));
+console.log(checkTypeOfArgument(true));
+console.log(checkTypeOfArgument(15));
+console.log(checkTypeOfArgument([]));
+console.log(checkTypeOfArgument({}));
+console.log(checkTypeOfArgument(null));
+
+function getEvenNumberFromArray(arr){
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 == 0){
+            newArr.push(arr[i]);
+        }
+    } console.log(newArr);
+}
+
+let arr1 = [1, 3, 4, 2, 6, 8, 3, 7];
+
+console.log(getEvenNumberFromArray(arr1));
+
+
 
 
 
