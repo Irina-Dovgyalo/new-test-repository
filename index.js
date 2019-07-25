@@ -1,45 +1,22 @@
 
-function sum(a, b){
-    return a + b;
+function Person(name, age){
+	this.name = name;
+	let localAge = age;
+	this.getAge = function(){
+		return localAge;
+	}
+	this.setAge = function(age){
+		if(typeof age === 'number'){
+			localAge = age;
+		} else {
+			console.log('Enter a number, please!');
+		}
+	}
 }
 
-console.log(sum(5, 3));
-
-function checkName(name){
-    let userName = 'Вася';
-    if(name == userName){
-        console.log('Привет, ' + name);
-    }
-}
-
-console.log(checkName('Вася'));
-
-function checkTypeOfArgument(a){
-    return typeof(a);
-}
-
-console.log(checkTypeOfArgument('str'));
-console.log(checkTypeOfArgument(true));
-console.log(checkTypeOfArgument(15));
-console.log(checkTypeOfArgument([]));
-console.log(checkTypeOfArgument({}));
-console.log(checkTypeOfArgument(null));
-
-function getEvenNumberFromArray(arr){
-    let newArr = [];
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] % 2 == 0){
-            newArr.push(arr[i]);
-        }
-    } console.log(newArr);
-}
-
-let arr1 = [1, 3, 4, 2, 6, 8, 3, 7];
-
-console.log(getEvenNumberFromArray(arr1));
-
-
-
-
-
-
+let mat = new Person('Mat', 16);
+console.log(mat.localAge); // undefined
+console.log(mat.name); // Mat
+console.log(mat.getAge()); // 16
+console.log(mat.setAge(25));
+console.log(mat.getAge()); // 25
