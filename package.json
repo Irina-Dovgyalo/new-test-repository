@@ -2,14 +2,15 @@
   "name": "new-test-repository",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist --presets es2015"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Irina-Dovgyalo/new-test-repository.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -17,6 +18,13 @@
   },
   "homepage": "https://github.com/Irina-Dovgyalo/new-test-repository#readme",
   "devDependencies": {
-    "fs-extra": "^8.1.0"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.5.5"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "core-js": "^2.6.9"
   }
 }
