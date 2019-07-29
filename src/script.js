@@ -1,7 +1,11 @@
-// const babel = require("@babel/core");
-
-import User from "./user";
-    
-let user = new User('Oleg', 'Ivanov', 1990);
-console.log(user.getFullName());
-console.log(user.getFullAge());
+let x = +prompt('Введите числитель', '');
+let y = +prompt('Введите знаменатель', '');
+try {
+    if (y !== 0){
+        console.log(x / y);
+    } else {
+        console.log(err);
+    }       
+} catch(err) {
+    console.log('На ноль делить нельзя!');    
+}
